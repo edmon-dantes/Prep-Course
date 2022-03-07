@@ -7,6 +7,9 @@ function obtenerMayor(x, y) {
   // Tu código:
   var nums = [x, y];
   return Math.max(...nums);
+
+  if (x > y) return x;
+  else return y;
 }
 
 function mayoriaDeEdad(edad) {
