@@ -23,18 +23,18 @@ function mayoriaDeEdad(edad) {
 }
 
 function conection(status) {
-  //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
+  //Recibimos un estado de conexión de un usuario representado por un valor numérico.
   //Cuando el estado es igual a 1, el usuario está "Online"
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
   switch (status) {
     case 1:
-      return 'Online';
+      return "Online";
     case 2:
-      return 'Away';
+      return "Away";
     default:
-      return 'Offline'
+      return "Offline";
   }
 }
 
@@ -50,6 +50,8 @@ function saludo(idioma) {
       return "Guten Tag!";
     case "mandarin":
       return "Ni Hao!";
+    case "ingles":
+      return "Hello!";
     default:
       return "Hola!";
   }
@@ -114,19 +116,19 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if (numero % 15 === 0) return 'fizzbuzz';
-  if (numero % 3 === 0) return 'fizz';
-  if (numero % 5 === 0) return 'buzz';
+  if (numero % 15 === 0) return "fizzbuzz";
+  if (numero % 3 === 0) return "fizz";
+  if (numero % 5 === 0) return "buzz";
   return numero;
 }
 
 function operadoresLogicos(num1, num2, num3) {
-  //La función recibe tres números distintos. 
+  //La función recibe tres números distintos.
   //Si num1 es mayor a num2 y a num3 y además es positivo, retornar ---> "Número 1 es mayor y positivo"
   //Si alguno de los tres números es negativo, retornar ---> "Hay negativos"
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
-  //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+  //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
   if (num1 < 0 || num2 < 0 || num3 < 0) {
     return "Hay negativos";
   } else if (num1 === 0 || num2 === 0 || num3 === 0) {
@@ -157,19 +159,19 @@ function esPrimo(numero) {
 }
 
 function esVerdadero(valor) {
-  //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
+  //Escribe una función que reciba un valor booleano y retorne “Soy verdadero”
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
   if (valor === true) {
-    return "Soy verdadero"
+    return "Soy verdadero";
   }
-  return "Soy falso"
+  return "Soy falso";
 }
 
 function tablaDelSeis() {
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
+  //Escribe tu código aquí
   let array = [];
   for (let i = 0; i < 11; i++) {
     array.push(6 * i);
@@ -180,7 +182,7 @@ function tablaDelSeis() {
 function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  return (numero > 99 && numero < 1000);
+  return numero > 99 && numero < 1000;
 }
 
 function doWhile(numero) {
@@ -193,12 +195,10 @@ function doWhile(numero) {
   do {
     i = i + 1;
     acum = acum + 5;
-  }
-  while (i < 8);
+  } while (i < 8);
 
   return acum;
 }
-
 
 // No modificar nada debajo de esta línea
 // --------------------------------
@@ -218,5 +218,5 @@ module.exports = {
   esVerdadero,
   tablaDelSeis,
   tieneTresDigitos,
-  doWhile
+  doWhile,
 };

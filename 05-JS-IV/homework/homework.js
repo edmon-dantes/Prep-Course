@@ -8,10 +8,10 @@ function crearGato(nombre, edad) {
   // Tu código:
 
   var obj = {
-    nombre: "nombre",
-    edad: "edad",
+    nombre: nombre,
+    edad: edad,
     meow: function () {
-      return "MeoW!";
+      return "Meow!";
     },
   };
 
@@ -75,7 +75,7 @@ function tieneEmail(usuario) {
   // De lo contratio, devuelve "false"
   // Tu código:
 
-  return "email" in usuario;
+  return !!usuario["email"];
 }
 
 function tienePropiedad(objeto, propiedad) {
@@ -122,7 +122,8 @@ function pasarUsuarioAPremium(usuarios) {
   // Tu código:
 
   return usuarios.map((usuario) => {
-    usuario.esPremiun = true;
+    usuario.esPremium = true;
+    return usuario;
   });
 }
 
@@ -151,10 +152,10 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
 
-  producto.calcularPrecioDescuento = function() {
+  producto.calcularPrecioDescuento = function () {
     var descuento = this.precio * this.porcentajeDeDescuento;
     return this.precio - descuento;
-  }
+  };
 
   return producto;
 }
